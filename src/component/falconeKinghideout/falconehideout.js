@@ -69,6 +69,7 @@ const Falconehideout = (props) => {
 
     useEffect(() => {
         checkForHideout()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
