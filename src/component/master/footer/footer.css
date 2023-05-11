@@ -1,0 +1,29 @@
+footer {
+    position: fixed;
+    background-color: #404041;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    margin: auto;
+    width: 50%;
+}
+
+.footer-container h5 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        position: fixed;
+        margin-top: 500px !important;
+    }
+
+    .footer-container {}
+
+    .footer-container h5 {
+        font-size: 15px;
+    }
+}

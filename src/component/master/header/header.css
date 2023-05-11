@@ -1,0 +1,16 @@
+.theme {
+    background-color: #404041 !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: rgb(216, 210, 210) !important;
+}

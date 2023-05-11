@@ -1,0 +1,22 @@
+.card {
+    background-color: rgb(83, 82, 82) !important;
+}
+
+.image-container {
+    height: 170px;
+    width: 100%;
+}
+
+.image-container img {
+    height: inherit;
+    width: inherit;
+}
+
+.image-container.disabled img {
+    filter: grayscale(100%);
+}
+
+.selected {
+    background-color: #9d8010;
+    color: white !important;
+}

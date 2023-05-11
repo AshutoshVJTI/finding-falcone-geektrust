@@ -1,23 +1,55 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Header from './component/master/header/header';
+import Footer from './component/master/footer/footer';
+import Falconehideout from './component/falconeKinghideout/falconehideout';
+import Planet from './component/Planet/planet';
+
 import './App.css';
+import Home from './component/Home/home';
 
 function App() {
+
+  const [body, setBody] = useState({})
+
+  const getAllData = (planet, vehicle, totalDistance, totalSpeed, token) => {
+    setBody({
+      token,
+      planet_names: planet,
+      vehicle_names: vehicle,
+      totalDistance,
+      totalSpeed
+    })
+
+    localStorage.setItem('body', JSON.stringify(
+      {
+        token,
+        planet_names: planet,
+        vehicle_names: vehicle,
+        totalDistance,
+        totalSpeed
+      }
+    ))
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/dashboard">
+          <Planet getAllData={getAllData} />
+        </Route>
+        <Route exact path="/falconehideout">
+          <Falconehideout body={body} />
+        </Route>
+
+      </Switch>
+      <Footer />
     </div>
   );
 }

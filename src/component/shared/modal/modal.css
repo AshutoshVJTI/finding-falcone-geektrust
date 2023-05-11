@@ -1,0 +1,24 @@
+#vehicleModal,
+.modal,
+#modal {
+    width: 100%;
+}
+
+.modal-content {
+    background-color: rgb(39, 39, 39) !important;
+    color: white;
+}
+
+.modal-header button {
+    color: white !important;
+}
+
+.centeredButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centeredButton button {
+    width: 100%;
+}
