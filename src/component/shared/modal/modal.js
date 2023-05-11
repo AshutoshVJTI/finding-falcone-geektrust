@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import useFetch from '../../../customHooks/useFetch'
 import Counter from '../counter/counter'
 import './modal.css'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { $ } from 'react-jquery-plugin'
 import { useSnackbar } from 'notistack'
 
@@ -30,7 +30,7 @@ const Modal = (props) => {
     const [token] = useFetch(`${process.env.REACT_APP_API}/token`, 'POST')
     const { enqueueSnackbar } = useSnackbar()
 
-    const history = useHistory()
+    const navigate = useNavigate()
 
     /*
         * Snackbar is used to show error message in a pop up faishon
@@ -137,7 +137,7 @@ const Modal = (props) => {
         )
 
         $("#vehicleModal").modal('hide')
-        history.push('/falconehideout')
+        navigate('/falconehideout')
     }
 
     return (
