@@ -5,6 +5,7 @@ import Footer from './component/master/footer/footer';
 import Falconehideout from './component/falconeKinghideout/falconehideout';
 import Planet from './component/Planet/planet';
 import Home from './component/Home/home';
+import './App.css'
 
 function App() {
 
